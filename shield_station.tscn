@@ -26,7 +26,6 @@ shape = SubResource("CircleShape2D_22tsh")
 
 [node name="shieldInterface" parent="." instance=ExtResource("3_rab4r")]
 visible = false
-position = Vector2(1, -152)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

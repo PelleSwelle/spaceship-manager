@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://bo3xpvb80byme"]
+[gd_scene load_steps=79 format=3 uid="uid://bo3xpvb80byme"]
 
 [ext_resource type="Script" path="res://ship.gd" id="1_x0dlx"]
 [ext_resource type="Texture2D" uid="uid://0vbhwetryviy" path="res://Tech Dungeon Roguelite - Asset Pack (DEMO)/TileSet v1.0.png" id="2_1op7a"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://cl38es4wu0fpc" path="res://1. Free Hologram Interface Wenrexa/Icons/briefcase.png" id="34_33buk"]
 [ext_resource type="Texture2D" uid="uid://c4hupn5uee4jb" path="res://1. Free Hologram Interface Wenrexa/Icons/bulletedList.png" id="35_axpku"]
 [ext_resource type="PackedScene" uid="uid://46y7i0cgi37n" path="res://shield_station.tscn" id="36_qleej"]
+[ext_resource type="PackedScene" uid="uid://bixfeqmcp0ef2" path="res://weapons/laser_turret.tscn" id="38_nqpxe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dcbe6"]
 texture = ExtResource("2_o2en2")
@@ -1320,3 +1321,6 @@ shape = SubResource("RectangleShape2D_cdsm2")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
 position = Vector2(4, 96)
 shape = SubResource("RectangleShape2D_mwer4")
+
+[node name="laserTurret" parent="." instance=ExtResource("38_nqpxe")]
+position = Vector2(192, -8)

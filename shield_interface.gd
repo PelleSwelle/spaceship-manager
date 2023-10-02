@@ -1,4 +1,4 @@
-extends Sprite2D
+extends CanvasLayer
 
 @export var chargeRate: float = .4
 var currentCharge: float = 0
@@ -13,7 +13,7 @@ var shield
 var shieldSprite = preload('res://shield.tscn')
 
 func _ready():
-	chargeLabel = $chargeButton/chargeLabel
+	chargeLabel = %chargeLabel
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

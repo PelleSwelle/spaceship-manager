@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx72s5s246vfp"]
+
+[ext_resource type="Texture2D" uid="uid://cm4ttdy1l1b5b" path="res://Sprites - Lasers Bullets #1 [66]v2.5/Laser Sprites/01.png" id="1_xdj7i"]
+[ext_resource type="Texture2D" uid="uid://bxgopa1wh0vst" path="res://Sprites - Lasers Bullets #1 [66]v2.5/Laser Sprites/11.png" id="2_icwkm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rqiuh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xdj7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_icwkm")
+}],
+"loop": false,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pggs0"]
+
+[node name="laserBlast" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_rqiuh")
+animation = &"shoot"
+frame = 1
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(56, 0)
+shape = SubResource("CircleShape2D_pggs0")

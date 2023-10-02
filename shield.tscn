@@ -177,7 +177,7 @@ radius = 179.229
 [node name="shield" type="AnimatedSprite2D"]
 z_index = -2
 position = Vector2(4.76837e-07, 0)
-scale = Vector2(2.5, 2.5)
+scale = Vector2(1.76667, 1.76667)
 sprite_frames = SubResource("SpriteFrames_b30t4")
 animation = &"idle"
 script = ExtResource("2_0lyuq")

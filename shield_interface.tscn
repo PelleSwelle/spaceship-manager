@@ -1,61 +1,64 @@
-[gd_scene load_steps=7 format=3 uid="uid://dt021xqgrscjq"]
+[gd_scene load_steps=3 format=3 uid="uid://dt021xqgrscjq"]
 
 [ext_resource type="Texture2D" uid="uid://b7uoh0kjyn1a0" path="res://1. Free Hologram Interface Wenrexa/Card X3/Card X5.png" id="1_tn4fm"]
 [ext_resource type="Script" path="res://shield_interface.gd" id="2_4hvh4"]
-[ext_resource type="Texture2D" uid="uid://c4tjiyntjribh" path="res://1. Free Hologram Interface Wenrexa/Button 1/Button Normal.png" id="2_uf57s"]
-[ext_resource type="Texture2D" uid="uid://cj4shp4pqpqic" path="res://1. Free Hologram Interface Wenrexa/Button 1/Button Active.png" id="3_imbvp"]
-[ext_resource type="Texture2D" uid="uid://65csq1751g15" path="res://1. Free Hologram Interface Wenrexa/Button 1/Button Hover.png" id="4_eix6g"]
-[ext_resource type="Texture2D" uid="uid://qb77v2mnuqdv" path="res://1. Free Hologram Interface Wenrexa/Button 1/Button Disable.png" id="5_l0nib"]
 
-[node name="shieldInterface" type="Sprite2D"]
-z_index = 10
-position = Vector2(171.179, 92.375)
-scale = Vector2(0.491379, 0.491379)
-texture = ExtResource("1_tn4fm")
+[node name="CanvasLayer" type="CanvasLayer"]
+offset = Vector2(400, 400)
+transform = Transform2D(1, 0, 0, 1, 400, 400)
 script = ExtResource("2_4hvh4")
 
-[node name="chargeButton" type="TextureButton" parent="."]
-offset_left = -292.0
-offset_top = -84.0
-offset_right = -145.0
-offset_bottom = -34.0
-texture_normal = ExtResource("2_uf57s")
-texture_pressed = ExtResource("3_imbvp")
-texture_hover = ExtResource("4_eix6g")
-texture_disabled = ExtResource("5_l0nib")
-ignore_texture_size = true
-stretch_mode = 4
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-209.698, -113.75)
+scale = Vector2(0.396552, 0.396552)
+texture = ExtResource("1_tn4fm")
 
-[node name="chargeLabel" type="Label" parent="chargeButton"]
-layout_mode = 0
-offset_left = -2.0
-offset_top = -1.0
-offset_right = 147.0
-offset_bottom = 50.0
-text = "Charge Shield"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = -1
+anchor_left = -0.243
+anchor_top = -0.235
+anchor_right = -0.052
+anchor_bottom = -0.049
+offset_left = 0.00402832
+offset_top = 1.52588e-05
+offset_right = 0.256004
+offset_bottom = 0.200001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 36
+theme_override_constants/margin_top = 36
+theme_override_constants/margin_right = 36
+theme_override_constants/margin_bottom = 36
 
-[node name="deployButton" type="TextureButton" parent="."]
-offset_left = -293.932
-offset_top = 17.0396
-offset_right = -145.932
-offset_bottom = 67.0396
-texture_normal = ExtResource("2_uf57s")
-texture_pressed = ExtResource("3_imbvp")
-texture_hover = ExtResource("4_eix6g")
-texture_disabled = ExtResource("5_l0nib")
-ignore_texture_size = true
-stretch_mode = 4
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
 
-[node name="Label" type="Label" parent="deployButton"]
-layout_mode = 0
-offset_right = 150.0
-offset_bottom = 51.0
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="chargeLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "[charge]"
+
+[node name="charge_button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Charge Shield
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="deployLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "[Deploy]"
+
+[node name="deploy_button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
 text = "Deploy Shield
 "
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[connection signal="pressed" from="chargeButton" to="." method="_on_charge_button_pressed"]
-[connection signal="pressed" from="deployButton" to="." method="_on_deploy_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/charge_button" to="." method="_on_charge_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer2/deploy_button" to="." method="_on_deploy_button_pressed"]
