@@ -1,34 +1,34 @@
 [gd_scene load_steps=11 format=3 uid="uid://bixfeqmcp0ef2"]
 
-[ext_resource type="Texture2D" uid="uid://bv7y7jtpxhope" path="res://space_breaker_asset/Weapons/Small/Laser/turret_02_mk1.png" id="1_apky5"]
-[ext_resource type="Texture2D" uid="uid://d11r7w8ihqeml" path="res://space_breaker_asset/Weapons/Small/Laser/turret_02_mk1_anim.png" id="1_uuek5"]
+[ext_resource type="Texture2D" uid="uid://bv7y7jtpxhope" path="res://3rd party assets/space_breaker_asset/Weapons/Small/Laser/turret_02_mk1.png" id="1_y6pgq"]
+[ext_resource type="Texture2D" uid="uid://d11r7w8ihqeml" path="res://3rd party assets/space_breaker_asset/Weapons/Small/Laser/turret_02_mk1_anim.png" id="2_6oh4h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_52360"]
-atlas = ExtResource("1_apky5")
+atlas = ExtResource("1_y6pgq")
 region = Rect2(0, 0, 32, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_16g01"]
-atlas = ExtResource("1_uuek5")
+atlas = ExtResource("2_6oh4h")
 region = Rect2(0, 0, 32, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2mh1k"]
-atlas = ExtResource("1_uuek5")
+atlas = ExtResource("2_6oh4h")
 region = Rect2(32, 0, 32, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbnoe"]
-atlas = ExtResource("1_uuek5")
+atlas = ExtResource("2_6oh4h")
 region = Rect2(64, 0, 32, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_au8na"]
-atlas = ExtResource("1_uuek5")
+atlas = ExtResource("2_6oh4h")
 region = Rect2(96, 0, 32, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dsnv1"]
-atlas = ExtResource("1_uuek5")
+atlas = ExtResource("2_6oh4h")
 region = Rect2(128, 0, 32, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qmov7"]
-atlas = ExtResource("1_uuek5")
+atlas = ExtResource("2_6oh4h")
 region = Rect2(160, 0, 32, 27)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5befo"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://ej0dqrp3a2v5"]
 
-[ext_resource type="Texture2D" uid="uid://dq7mipatnjrg4" path="res://Pipoya VFX HEXShield/480x480/pipo-btleffect206_480.png" id="1_yry6t"]
+[ext_resource type="Texture2D" uid="uid://dq7mipatnjrg4" path="res://3rd party assets/Pipoya VFX HEXShield/480x480/pipo-btleffect206_480.png" id="1_yry6t"]
 [ext_resource type="Script" path="res://shield.gd" id="2_0lyuq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5eus"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dt021xqgrscjq"]
 
-[ext_resource type="Texture2D" uid="uid://b7uoh0kjyn1a0" path="res://1. Free Hologram Interface Wenrexa/Card X3/Card X5.png" id="1_tn4fm"]
+[ext_resource type="Texture2D" uid="uid://b7uoh0kjyn1a0" path="res://3rd party assets/1. Free Hologram Interface Wenrexa/Card X3/Card X5.png" id="1_tn4fm"]
 [ext_resource type="Script" path="res://shield_interface.gd" id="2_4hvh4"]
 
 [node name="CanvasLayer" type="CanvasLayer"]

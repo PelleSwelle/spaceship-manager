@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://46y7i0cgi37n"]
 
-[ext_resource type="Texture2D" uid="uid://c2xdivff7flhr" path="res://1. Free Hologram Interface Wenrexa/Icons/shield.png" id="1_tcn03"]
+[ext_resource type="Texture2D" uid="uid://c2xdivff7flhr" path="res://3rd party assets/1. Free Hologram Interface Wenrexa/Icons/shield.png" id="1_tcn03"]
 [ext_resource type="Script" path="res://shield_station.gd" id="1_yspmp"]
 [ext_resource type="PackedScene" uid="uid://dt021xqgrscjq" path="res://shield_interface.tscn" id="3_rab4r"]
 

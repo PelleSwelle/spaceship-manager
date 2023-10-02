@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://rdvrk8nb6vlf"]
 
-[ext_resource type="Texture2D" uid="uid://yie68jnlqcvf" path="res://Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x2.png" id="1_il86c"]
+[ext_resource type="Texture2D" uid="uid://yie68jnlqcvf" path="res://3rd party assets/Tech Dungeon Roguelite - Asset Pack (DEMO)/Players/players blue x2.png" id="1_il86c"]
 [ext_resource type="Script" path="res://player.gd" id="1_kc2k3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_st2ss"]
