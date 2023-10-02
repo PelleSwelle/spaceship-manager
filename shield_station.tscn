@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://46y7i0cgi37n"]
+
+[ext_resource type="Texture2D" uid="uid://c2xdivff7flhr" path="res://1. Free Hologram Interface Wenrexa/Icons/shield.png" id="1_tcn03"]
+[ext_resource type="Script" path="res://shield_station.gd" id="1_yspmp"]
+[ext_resource type="PackedScene" uid="uid://dt021xqgrscjq" path="res://shield_interface.tscn" id="3_rab4r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3rub"]
+size = Vector2(30, 34)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_22tsh"]
+radius = 51.0392
+
+[node name="shieldStation" type="StaticBody2D"]
+script = ExtResource("1_yspmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b3rub")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tcn03")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_22tsh")
+
+[node name="shieldInterface" parent="." instance=ExtResource("3_rab4r")]
+visible = false
+position = Vector2(1, -152)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvtui4beaf7mc"]
+
+[ext_resource type="Script" path="res://collectables/scrap.gd" id="1_wvjgt"]
+[ext_resource type="Texture2D" uid="uid://p7mdos60w2ot" path="res://tilesets/SciFi_Warehouse_E.png" id="2_xhhpc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rcdiq"]
+radius = 24.0
+
+[node name="scrap" type="Area2D"]
+script = ExtResource("1_wvjgt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xhhpc")
+hframes = 16
+vframes = 16
+frame = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rcdiq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

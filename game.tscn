@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://hb8nfm4ha5dl"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_s8qg3"]
+[ext_resource type="PackedScene" uid="uid://d1u23rhrg87jk" path="res://world.tscn" id="2_j5e4t"]
+[ext_resource type="PackedScene" uid="uid://bo3xpvb80byme" path="res://ship.tscn" id="3_lpuoe"]
+[ext_resource type="PackedScene" uid="uid://rdvrk8nb6vlf" path="res://player.tscn" id="4_kivtk"]
+[ext_resource type="PackedScene" uid="uid://djm5bryqfrrxr" path="res://UI/ui.tscn" id="5_ge7y8"]
+
+[node name="game" type="Node2D" node_paths=PackedStringArray("ship", "ui")]
+script = ExtResource("1_s8qg3")
+ship = NodePath("ship")
+ui = NodePath("UI")
+
+[node name="world" parent="." instance=ExtResource("2_j5e4t")]
+
+[node name="ship" parent="." instance=ExtResource("3_lpuoe")]
+position = Vector2(504, 304)
+
+[node name="player" parent="." instance=ExtResource("4_kivtk")]
+position = Vector2(664, 376)
+
+[node name="UI" parent="." instance=ExtResource("5_ge7y8")]
