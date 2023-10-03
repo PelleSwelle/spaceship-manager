@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://hb8nfm4ha5dl"]
+[gd_scene load_steps=7 format=3 uid="uid://hb8nfm4ha5dl"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_s8qg3"]
 [ext_resource type="PackedScene" uid="uid://d1u23rhrg87jk" path="res://world.tscn" id="2_j5e4t"]
 [ext_resource type="PackedScene" uid="uid://bo3xpvb80byme" path="res://ship.tscn" id="3_lpuoe"]
 [ext_resource type="PackedScene" uid="uid://rdvrk8nb6vlf" path="res://player.tscn" id="4_kivtk"]
+[ext_resource type="PackedScene" uid="uid://id7ihvhlrls1" path="res://station.tscn" id="4_u4ha4"]
 [ext_resource type="PackedScene" uid="uid://djm5bryqfrrxr" path="res://UI/ui.tscn" id="5_ge7y8"]
 
 [node name="game" type="Node2D" node_paths=PackedStringArray("ship", "ui")]
@@ -16,7 +17,25 @@ ui = NodePath("UI")
 [node name="ship" parent="." instance=ExtResource("3_lpuoe")]
 position = Vector2(504, 304)
 
+[node name="Station" parent="ship" instance=ExtResource("4_u4ha4")]
+position = Vector2(368, 96)
+rotation = 1.57079
+
+[node name="Sprite2D" parent="ship/Station" index="0"]
+region_enabled = true
+region_rect = Rect2(624, 240, 144, 73)
+
+[node name="Station2" parent="ship" instance=ExtResource("4_u4ha4")]
+position = Vector2(80, 56)
+
+[node name="Sprite2D" parent="ship/Station2" index="0"]
+region_enabled = true
+region_rect = Rect2(623, 192, 145, 49)
+
 [node name="player" parent="." instance=ExtResource("4_kivtk")]
-position = Vector2(664, 376)
+position = Vector2(1024, 800)
 
 [node name="UI" parent="." instance=ExtResource("5_ge7y8")]
+
+[editable path="ship/Station"]
+[editable path="ship/Station2"]
