@@ -956,6 +956,8 @@ terrain_set_0/terrain_0/name = "floor"
 terrain_set_0/terrain_0/color = Color(0.501961, 0.345098, 0.25098, 1)
 terrain_set_0/terrain_1/name = "wall"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
+terrain_set_0/terrain_2/name = "shield"
+terrain_set_0/terrain_2/color = Color(0.46875, 0.5, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_dcbe6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pv3d"]
@@ -1025,6 +1027,7 @@ position = Vector2(192, -8)
 
 [node name="pilotStation" parent="." instance=ExtResource("5_jxa2b")]
 position = Vector2(888, 512)
+title = "Pilot Station"
 
 [node name="Sprite2D" parent="pilotStation" index="0"]
 position = Vector2(40, 16)
@@ -1042,6 +1045,7 @@ rotation = 1.57079
 
 [node name="weaponsStation" parent="." instance=ExtResource("5_jxa2b")]
 position = Vector2(416, 304)
+title = "Weapons Station"
 
 [node name="Sprite2D" parent="weaponsStation" index="0"]
 position = Vector2(0, -24)
@@ -1056,6 +1060,7 @@ position = Vector2(0, -3)
 
 [node name="shieldsStation" parent="." instance=ExtResource("5_jxa2b")]
 position = Vector2(544, 488)
+title = "Shield Station"
 
 [node name="Sprite2D" parent="shieldsStation" index="0"]
 position = Vector2(-48, 240)
